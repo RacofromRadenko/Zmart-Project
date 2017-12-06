@@ -1,9 +1,6 @@
 /*Marko's variables*/
 /*Raco's variables*/
 /*Ana's variables*/
-body {
-  overflow-x: hidden;
-}
 /*Template for Raco's paragraphs in div id5*/
 .tmpl .col-lg-9 {
   padding-left: 52px;
@@ -33,64 +30,72 @@ body {
   font-size: 18px;
 }
 .head-content-wrapper {
+  background: white;
   height: 150px;
 }
-.head-content-wrapper nav {
+.head-content-wrapper .navbar {
+  background: white;
   border: 0;
   margin: 0;
   height: 150px;
 }
-.head-content-wrapper nav .container-fluid .container {
-  padding: 0;
+.head-content-wrapper .navbar .container-fluid .container .row #imagelogo {
+  position: relative;
+  top: -20px;
 }
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-collapse {
-  margin-top: 90px;
-}
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-collapse ul {
-  font-size: 27px;
-  padding-right: 20px;
-}
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-collapse ul li a {
-  color: #585858;
-  cursor: pointer;
-}
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-collapse ul li a:hover {
-  color: #ff7f00;
-}
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-header .navbar-brand {
-  padding: 0;
-}
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-header .navbar-brand img {
+.head-content-wrapper .navbar .container-fluid .container .row #imagelogo img {
   height: 150px;
   width: 150px;
-  transform: rotateX(40deg);
-  position: absolute;
-  left: 30px;
-  top: -15px;
+  transform: rotateX(45deg);
 }
-.head-content-wrapper nav .container-fluid .container .row .col-lg-12 .navbar-header .navbar-brand span {
-  position: absolute;
-  top: 115px;
-  left: 35px;
-  transform: rotateX(40deg);
+.head-content-wrapper .navbar .container-fluid .container .row #menubar {
+  width: 100%;
+  position: relative;
+  top: -50px;
+  z-index: 10;
+  background: white;
+}
+.head-content-wrapper .navbar .container-fluid .container .row #menubar .navbar-header .navbar-brand {
   font-size: 30pt;
-  font-family: 'Roboto';
-  letter-spacing: 1.3px;
+  transform: rotateX(45deg);
+  padding-left: 26px;
+  font-family: Roboto;
   font-weight: bold;
   color: #dd6414;
+}
+.head-content-wrapper .navbar .container-fluid .container .row #menubar #navbar3 {
+  border: 0;
+  font-size: 18pt;
+  cursor: pointer;
+}
+.head-content-wrapper .navbar .container-fluid .container .row #menubar #navbar3 .nav li {
+  text-align: center;
+}
+.head-content-wrapper .navbar .container-fluid .container .row #menubar #navbar3 .nav li a:hover {
+  color: #ff7f00;
 }
 /*ID1 DIV*/
 #id1 {
   padding: 0;
+  height: 685px;
+  overflow: hidden;
 }
-#id1 .bottomright {
-  position: absolute;
-  bottom: 9px;
-  right: 390px;
-  font-size: 80px;
+#id1 .container {
+  position: relative;
+  bottom: 430px;
+  text-align: right;
+  z-index: 3;
+}
+#id1 .container .owl-text {
+  font-size: 58pt;
   color: white;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
+}
+#id1 .owl-carousel .item img {
+  object-fit: cover;
+  width: 100%;
+  height: 1000px;
 }
 /*ID2 DIV*/
 #id2 {
@@ -516,6 +521,21 @@ body {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
+  .head-content-wrapper {
+    height: 100px;
+  }
+  .head-content-wrapper .navbar .container-fluid {
+    padding: 0;
+  }
+  .head-content-wrapper .navbar .container-fluid .container .row #imagelogo {
+    display: none;
+  }
+  .head-content-wrapper .navbar .container-fluid .container .row #menubar {
+    top: 30px;
+  }
+  #id1 .container {
+    display: none;
+  }
   #id3 {
     height: 1800px;
   }
@@ -545,6 +565,16 @@ body {
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  #id1 {
+    height: 400px;
+  }
+  #id1 .owl-carousel .item img {
+    object-fit: cover;
+    height: 400px;
+  }
+  #id3 {
+    height: 2100px;
+  }
   #id3 .container .row .col-lg-4 .jumbotron .card svg {
     width: 50%;
     height: 50%;

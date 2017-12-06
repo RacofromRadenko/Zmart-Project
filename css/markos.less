@@ -14,10 +14,6 @@
 @cardsColor: #74a6cb;
 @titleCardColor: #4e677a;
 
-body {
-  overflow-x: hidden;
-}
-
 /*Template for Raco's paragraphs in div id5*/
 .tmpl {
 
@@ -54,55 +50,56 @@ body {
 }
 
 .head-content-wrapper {
+  background: white;
   height: 150px;
-  nav {
+  .navbar {
+    background: white;
     border: 0;
     margin: 0;
     height: 150px;
-
     .container-fluid {
       .container {
-        padding: 0;
         .row {
-          .col-lg-12 {
-            .navbar-collapse {
-              margin-top: 90px;
-              ul {
-                font-size: 27px;
-                padding-right: 20px;
-                li {
-                  a {
-                    color: #585858;
-                    cursor: pointer;
-                    &:hover {
+          #imagelogo {
+            position: relative;
+            top: -20px;
+            img {
+
+              height: 150px;
+              width: 150px;
+              transform: rotateX(45deg);
+            }
+
+          }
+          #menubar {
+            width: 100%;
+            position: relative;
+            top: -50px;
+            z-index: 10;
+            background: white;
+            .navbar-header {
+              .navbar-brand {
+                font-size: 30pt;
+                transform: rotateX(45deg);
+                padding-left: 26px;
+                font-family: Roboto;
+                font-weight: bold;
+                color: #dd6414;
+              }
+            }
+            #navbar3 {
+              border: 0;
+              font-size: 18pt;
+              cursor: pointer;
+              .nav{
+
+                li{
+                  text-align: center;
+                  a{
+                    &:hover{
                       color: #ff7f00;
                     }
                   }
-                }
-
-              }
-            }
-            .navbar-header {
-              .navbar-brand {
-                padding: 0;
-                img {
-                  height: 150px;
-                  width: 150px;
-                  transform: rotateX(40deg);
-                  position: absolute;
-                  left: 30px;
-                  top: -15px;
-                }
-                span {
-                  position: absolute;
-                  top: 115px;
-                  left: 35px;
-                  transform: rotateX(40deg);
-                  font-size: 30pt;
-                  font-family: 'Roboto';
-                  letter-spacing: 1.3px;
-                  font-weight: bold;
-                  color: #dd6414;
                 }
               }
             }
@@ -116,15 +113,30 @@ body {
 /*ID1 DIV*/
 #id1 {
   padding: 0;
+  height: 685px;
+  overflow: hidden;
+  .container {
+    position: relative;
+    bottom: 430px;
+    text-align: right;
+    z-index: 3;
+    .owl-text {
+      font-size: 58pt;
+      color: white;
+      font-family: Montserrat, sans-serif;
+      font-weight: bold;
+    }
+  }
 
-  .bottomright {
-    position: absolute;
-    bottom: 9px;
-    right: 390px;
-    font-size: 80px;
-    color: white;
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
+  .owl-carousel {
+    .item {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 1000px;
+
+      }
+    }
   }
 }
 
@@ -614,6 +626,31 @@ body {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
+  .head-content-wrapper {
+    height: 100px;
+    .navbar {
+      .container-fluid {
+        padding: 0;
+        .container {
+          .row {
+            #imagelogo {
+              display: none;
+            }
+            #menubar {
+              top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #id1 {
+    .container {
+      display: none;
+    }
+  }
+
   #id3 {
     height: 1800px;
   }
@@ -657,8 +694,20 @@ body {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  #id3 {
+  #id1 {
+    height: 400px;
+    .owl-carousel {
+      .item {
+        img {
+          object-fit: cover;
+          height: 400px;
+        }
+      }
+    }
+  }
 
+  #id3 {
+    height: 2100px;
     .container {
       .row {
         .col-lg-4 {
