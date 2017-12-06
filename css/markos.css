@@ -464,6 +464,9 @@
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  .head-content-wrapper .navbar .container-fluid .container .row #menubar #navbar3 {
+    font-size: 13pt;
+  }
   #id3 {
     height: 2000px;
   }
